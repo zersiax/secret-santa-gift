@@ -68,7 +68,7 @@ $size: 200px;
   left: 50%;
   z-index: 1;
   display: block;
-  width: 35vw;
+  width: 60vw;
   height: auto;
   transform: translate3d(-50%, -50%, 0) rotateY(0) rotateX(0) scale(0);
   transition: all 3s ease-out .5s;
@@ -223,7 +223,7 @@ $size: 200px;
 
 .present.open {
 	.gift {
-    transform: translate3d(-50%, -50%, 100px) rotateY(720deg) rotateX(5deg) scale(1);
+    transform: translate3d(-50%, -50%, 100px) rotateY(360deg) rotateX(5deg) scale(1);
   }
 
 	.left { transform: translateX(-50%) rotateY(-90deg) rotateX(-90deg); }
