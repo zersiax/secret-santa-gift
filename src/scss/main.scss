@@ -82,8 +82,33 @@ $size: 200px;
 	width: $size;
 	height: $size;
 	margin: 0 auto;
+  cursor: pointer;
 	perspective: 600px;
 	transform: translateY(-50%);
+}
+
+.wiggle-container {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+}
+
+.present.animate .wiggle-container {
+  animation: wiggle .3s ease 0s 1 normal forwards;
+}
+
+@keyframes wiggle {
+  0% { transform: translateX(0) rotateX(0); }
+  25% { transform: translateX(calc(var(--count) * -1px)) rotateX(calc(var(--count) * 1deg)); }
+  50% { transform: translateX(0) rotateX(0); }
+  75% { transform: translateX(calc(var(--count) * 1px)) rotateX(calc(var(--count) * -1deg)); }
+  100% { transform: translateX(0) rotateX(0); }
+  // 0% { transform: translateX(0) rotateX(0); }
+  // 25% { transform: translateX(-5px) rotateX(2deg); }
+  // 50% { transform: translateX(0) rotateX(0); }
+  // 75% { transform: translateX(5px) rotateX(-2deg); }
+  // 100% { transform: translateX(0) rotateX(0); }
 }
 
 .rotate-container {

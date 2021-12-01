@@ -1,15 +1,19 @@
 // TODO:
-// - wiggle on click (more wiggle the closer counts is on countsNeeded)
 // - christmas emoji party in the tab title
 // - confetti on open?
 // - sound?
 
 const countsNeeded = 20;
-let counts = 0;
+let counts = 1;
 
 const present = document.querySelector('.present');
 present.addEventListener('click', () => {
   counts += 1;
+  present.style.setProperty('--count', Math.ceil(counts / 2));
+  present.classList.add('animate');
+  setTimeout(() => {
+    present.classList.remove('animate');
+  }, 300);
 
   if (counts >= countsNeeded) {
     present.classList.add('open');
