@@ -68,7 +68,7 @@ $size: 200px;
   left: 50%;
   z-index: 1;
   display: block;
-  width: 60vw;
+  width: 50vw;
   height: auto;
   transform: translate3d(-50%, -50%, 0) rotateY(0) rotateX(0) scale(0);
   transition: all 3s ease-out .5s;
@@ -104,11 +104,6 @@ $size: 200px;
   50% { transform: translateX(0) rotateX(0); }
   75% { transform: translateX(calc(var(--count) * 1px)) rotateX(calc(var(--count) * -1deg)); }
   100% { transform: translateX(0) rotateX(0); }
-  // 0% { transform: translateX(0) rotateX(0); }
-  // 25% { transform: translateX(-5px) rotateX(2deg); }
-  // 50% { transform: translateX(0) rotateX(0); }
-  // 75% { transform: translateX(5px) rotateX(-2deg); }
-  // 100% { transform: translateX(0) rotateX(0); }
 }
 
 .rotate-container {
@@ -242,7 +237,6 @@ $size: 200px;
 .present:hover {
 	.lid {
 		animation: none;
-		// transform: translate3d(0, -40px, -10px) rotateX(10deg);
 	}
 }
 
