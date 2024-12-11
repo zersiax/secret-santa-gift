@@ -61,6 +61,8 @@ canvas {
   width: 100%;
   text-align: center;
   font-size: 7vw;
+  font-family: 'VisualBraille', sans-serif;
+
   color: white;
   user-select: none;
 }
@@ -274,6 +276,7 @@ $size: 200px;
 		transform: translate3d(0, -120px, -120px) rotateX(50deg);
 	}
 
+
   .front,
   .left,
   .back,
@@ -281,4 +284,18 @@ $size: 200px;
   .lid {
     transition: transform .5s ease-out;
   }
+}
+
+.hidy { /* insert silly Lederhosen joke here */
+
+    opacity: 0; /* Make the video fully transparent */
+    pointer-events: none; /* Disable interactions. Or well ... mouse ones, anyway  */
+    transform: scale(0.8); /* Slightly scale down the video for animation effect. I'm told this is a good thing to do :shrug:  */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for fade-in and scale */
+}
+
+.NoMoHidy {
+    opacity: 1; /* Make the video fully visible */
+    pointer-events: auto; /* Enable interactions */
+    transform: scale(1); /* Reset scale */
 }
