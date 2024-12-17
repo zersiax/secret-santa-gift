@@ -1,6 +1,5 @@
 const countsNeeded = 20;
 let counts = 1;
-const video = document.getElementById('myVideo');
 const present = document.querySelector('.present');
 present.addEventListener('click', () => {
   counts += 1;
@@ -12,9 +11,6 @@ present.addEventListener('click', () => {
 
   if (counts >= countsNeeded) {
     present.classList.add('open');
-    video.classList.remove('hidy'); // Remove the hidden class
-    video.classList.add('visible-video');  // Add the visible class
-
   }
 });
 
