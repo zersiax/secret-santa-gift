@@ -1,4 +1,4 @@
-const countsNeeded = 20;
+const countsNeeded = 3;
 let counts = 1;
 const video = document.getElementById('myVideo');
 const present = document.querySelector('.present');
